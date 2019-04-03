@@ -49,29 +49,6 @@ class SceneController extends Controller
         return Scene::query()->get();
     }
 
-    public function update(Request $request, string $id)
-    {
-        $scene = Scene::query()->find($id);
-        if (is_null($scene)) {
-            return response(['msg' => 'scene not exist'], 404);
-        }
-
-        $name = $request->get('name');
-        if ($name) {
-            $scene->name = $name;
-        }
-
-        $requirement = $request->get('requirement');
-        if ($requirement) {
-            // TODO
-        }
-
-        if ($scene->save()) {
-            return response(['msg' => 'success']);
-        }
-        return response(['msg' => 'error'], 500);
-    }
-
     public function delete(string $id)
     {
         $scene = Scene::query()->find($id);

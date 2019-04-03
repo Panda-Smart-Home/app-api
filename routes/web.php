@@ -16,5 +16,8 @@ $router->patch('/devices/{id}', 'DeviceController@update');
 
 $router->get('/scenes[/{id}]', 'SceneController@get');
 $router->post('/scenes', 'SceneController@create');
-$router->patch('/scenes/{id}', 'SceneController@update');
 $router->delete('/scenes/{id}', 'SceneController@delete');
+
+$router->get('/actions[/{id}]', 'ActionController@get');
+$router->post('/actions', 'ActionController@create');
+$router->delete('/actions/{id}', 'ActionController@delete');
