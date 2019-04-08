@@ -21,3 +21,7 @@ $router->delete('/scenes/{id}', 'SceneController@delete');
 $router->get('/actions[/{id}]', 'ActionController@get');
 $router->post('/actions', 'ActionController@create');
 $router->delete('/actions/{id}', 'ActionController@delete');
+
+$router->get('/jobs[/{id}]', 'JobController@get');
+$router->post('/jobs', 'JobController@create');
+$router->delete('/jobs/{id}', 'JobController@delete');

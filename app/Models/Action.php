@@ -5,12 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class Device
+ * Class Action
  * @package App\Models
  *
  * @property int    $id
  * @property string $name
- * @property array  $requirement
+ * @property array  $todo
+ * @property array  $devices
  */
 class Action extends Model
 {
