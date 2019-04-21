@@ -12,11 +12,12 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $name
  * @property array  $status
  * @property bool   $online
+ * @property string $ip
  */
 class Device extends Model
 {
     protected $fillable = [
-        'id', 'name', 'status', 'online'
+        'id', 'name', 'status', 'online', 'ip'
     ];
 
     protected $casts = [

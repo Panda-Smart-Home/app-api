@@ -19,6 +19,7 @@ class Devices extends Migration
             $table->string('type');
             $table->text('status');
             $table->boolean('online');
+            $table->string('ip')->default('0.0.0.0');
             $table->timestamps();
         });
     }
