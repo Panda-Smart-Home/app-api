@@ -30,7 +30,10 @@ class DeviceController extends Controller
 
         $status = $request->get('status');
         if ($status) {
-            $device->status = $status;
+            /**
+             * @var Device $device
+             */
+            $device->updateStatus($status);
         }
 
         if ($device->save()) {
