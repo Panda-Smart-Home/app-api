@@ -10,7 +10,7 @@ class DeviceController extends Controller
 {
     public function get(string $id = null)
     {
-        if ($id) {
+        if (!is_null($id)) {
             return Device::query()->find($id);
         }
         return Device::query()->get();

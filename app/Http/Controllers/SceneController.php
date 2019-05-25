@@ -43,7 +43,7 @@ class SceneController extends Controller
 
     public function get(string $id = null)
     {
-        if ($id) {
+        if (!is_null($id)) {
             return Scene::query()->find($id);
         }
         return Scene::query()->get();

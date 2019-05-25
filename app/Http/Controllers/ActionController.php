@@ -41,7 +41,7 @@ class ActionController extends Controller
 
     public function get(string $id = null)
     {
-        if ($id) {
+        if (!is_null($id)) {
             return Action::query()->find($id);
         }
         return Action::query()->get();

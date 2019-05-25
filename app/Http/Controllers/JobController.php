@@ -47,7 +47,7 @@ class JobController extends Controller
 
     public function get(string $id = null)
     {
-        if ($id) {
+        if (!is_null($id)) {
             return Job::with(['action', 'scene'])->find($id);
         }
         return Job::with(['action', 'scene'])->get();
